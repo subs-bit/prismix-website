@@ -3,6 +3,8 @@ import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { getLatestNews } from "../services/newsService";
 import { news as STATIC_NEWS } from "../data/news";
+import { getClients } from "../services/clientsService";
+import { clients as STATIC_CLIENTS } from "../data/clients";
 
 const Home = () => {
   // Latest News section. Initial value comes from the static seed so the
@@ -11,6 +13,7 @@ const Home = () => {
   // Only the first three items are displayed — older items stay in the JSON
   // but are not shown on the homepage.
   const [newsItems, setNewsItems] = useState(STATIC_NEWS);
+  const [clientItems, setClientItems] = useState(STATIC_CLIENTS);
 
   useEffect(() => {
     let alive = true;
@@ -23,6 +26,19 @@ const Home = () => {
       .catch(() => {
         // Already covered by the service-level fallback; nothing to do here.
       });
+    return () => {
+      alive = false;
+    };
+  }, []);
+  useEffect(() => {
+    let alive = true;
+    getClients()
+      .then((items) => {
+        if (alive && Array.isArray(items) && items.length > 0) {
+          setClientItems(items);
+        }
+      })
+      .catch(() => {});
     return () => {
       alive = false;
     };
@@ -171,37 +187,26 @@ const Home = () => {
         </h2>
         <div className="overflow-hidden w-full">
           <div className="clients-marquee-track">
-            {[
-              { src: "/sodexo.png",      alt: "Sodexo" },
-              { src: "/being-human.png", alt: "Being Human" },
-              { src: "/flf.png",         alt: "FLF" },
-              { src: "/tata.png",        alt: "Tata" },
-              { src: "/gsl.png",         alt: "GSL" },
-              { src: "/spotlight.png",   alt: "Spotlight" },
-              { src: "/3Pine.png",       alt: "3Pine" },
-              { src: "/starcruise2.png", alt: "Star Cruise" },
-              { src: "/indivar.jpg",     alt: "Indivar" },
-              { src: "/LuvFilms.jpg",    alt: "Luv Films" },
-            ].concat([
-              { src: "/sodexo.png",      alt: "Sodexo" },
-              { src: "/being-human.png", alt: "Being Human" },
-              { src: "/flf.png",         alt: "FLF" },
-              { src: "/tata.png",        alt: "Tata" },
-              { src: "/gsl.png",         alt: "GSL" },
-              { src: "/spotlight.png",   alt: "Spotlight" },
-              { src: "/3Pine.png",       alt: "3Pine" },
-              { src: "/starcruise2.png", alt: "Star Cruise" },
-              { src: "/indivar.jpg",     alt: "Indivar" },
-              { src: "/LuvFilms.jpg",    alt: "Luv Films" },
-            ]).map((client, i) => (
-              <div key={i} className="flex-shrink-0 flex items-center justify-center px-10">
+            {clientItems.concat(clientItems).map((client, i) => {
+              const logo = (
                 <img
-                  src={client.src}
-                  alt={client.alt}
+                  src={client.logo}
+                  alt={client.name}
                   className="h-20 w-40 object-contain"
                 />
-              </div>
-            ))}
+              );
+              return (
+                <div key={`${client.id}-${i}`} className="flex-shrink-0 flex items-center justify-center px-10">
+                  {client.website ? (
+                    <a href={client.website} target="_blank" rel="noopener noreferrer" aria-label={client.name}>
+                      {logo}
+                    </a>
+                  ) : (
+                    logo
+                  )}
+                </div>
+              );
+            })}
           </div>
         </div>
       </section>

@@ -8,9 +8,10 @@ export default defineConfig({
   server: {
     host: true,
     proxy: {
-      // Forward API calls to the local functions server (npm run serve starts both)
-      "/api":                  "http://localhost:9999",
-      "/.netlify/functions":   "http://localhost:9999",
+      // When opening Vite directly on :5173 during Netlify dev, forward API
+      // calls to the Netlify dev server where the real functions run.
+      "/api":                  "http://localhost:8888",
+      "/.netlify/functions":   "http://localhost:8888",
     },
     watch: {
       usePolling: true,

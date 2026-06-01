@@ -70,24 +70,24 @@
     "updatedAt": "2025-06-01T00:00:00.000Z"
   },
   {
-    "id": "star-cruise",
-    "name": "Star Cruise",
-    "logo": "/starcruise2.png",
-    "website": null,
-    "published": true,
-    "order": 8,
-    "createdAt": "2025-06-01T00:00:00.000Z",
-    "updatedAt": "2025-06-01T00:00:00.000Z"
-  },
-  {
     "id": "vroom-vroom",
     "name": "Vroom Vroom",
     "logo": "https://raw.githubusercontent.com/prismixstudios/prismixstudios/main/public/clients/client-vroom-vroom-1780312656189.png",
     "website": null,
     "published": true,
-    "order": 9,
+    "order": 8,
     "createdAt": "2026-06-01T11:18:05.931Z",
-    "updatedAt": "2026-06-01T11:19:43.602Z"
+    "updatedAt": "2026-06-01T11:19:48.669Z"
+  },
+  {
+    "id": "star-cruise",
+    "name": "Star Cruise",
+    "logo": "/starcruise2.png",
+    "website": null,
+    "published": true,
+    "order": 9,
+    "createdAt": "2025-06-01T00:00:00.000Z",
+    "updatedAt": "2026-06-01T11:19:48.669Z"
   },
   {
     "id": "indivar",

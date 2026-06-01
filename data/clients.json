@@ -90,23 +90,23 @@
     "updatedAt": "2025-06-01T00:00:00.000Z"
   },
   {
-    "id": "luv-films",
-    "name": "Luv Films",
-    "logo": "/LuvFilms.jpg",
-    "website": null,
-    "published": true,
-    "order": 10,
-    "createdAt": "2025-06-01T00:00:00.000Z",
-    "updatedAt": "2025-06-01T00:00:00.000Z"
-  },
-  {
     "id": "vroom-vroom",
     "name": "Vroom Vroom",
     "logo": "https://raw.githubusercontent.com/prismixstudios/prismixstudios/main/public/clients/client-vroom-vroom-1780312656189.png",
     "website": null,
     "published": true,
-    "order": 11,
+    "order": 10,
     "createdAt": "2026-06-01T11:18:05.931Z",
-    "updatedAt": "2026-06-01T11:18:05.931Z"
+    "updatedAt": "2026-06-01T11:19:40.673Z"
+  },
+  {
+    "id": "luv-films",
+    "name": "Luv Films",
+    "logo": "/LuvFilms.jpg",
+    "website": null,
+    "published": true,
+    "order": 11,
+    "createdAt": "2025-06-01T00:00:00.000Z",
+    "updatedAt": "2026-06-01T11:19:40.673Z"
   }
 ]

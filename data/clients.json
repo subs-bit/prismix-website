@@ -40,24 +40,14 @@
     "updatedAt": "2025-06-01T00:00:00.000Z"
   },
   {
-    "id": "vroom-vroom",
-    "name": "Vroom Vroom",
-    "logo": "https://raw.githubusercontent.com/prismixstudios/prismixstudios/main/public/clients/client-vroom-vroom-1780312656189.png",
-    "website": null,
-    "published": true,
-    "order": 5,
-    "createdAt": "2026-06-01T11:18:05.931Z",
-    "updatedAt": "2026-06-01T11:20:00.756Z"
-  },
-  {
     "id": "gsl",
     "name": "GSL",
     "logo": "/gsl.png",
     "website": null,
     "published": true,
-    "order": 6,
+    "order": 5,
     "createdAt": "2025-06-01T00:00:00.000Z",
-    "updatedAt": "2026-06-01T11:20:00.756Z"
+    "updatedAt": "2026-06-01T11:32:27.199Z"
   },
   {
     "id": "spotlight",
@@ -65,9 +55,9 @@
     "logo": "/spotlight.png",
     "website": null,
     "published": true,
-    "order": 7,
+    "order": 6,
     "createdAt": "2025-06-01T00:00:00.000Z",
-    "updatedAt": "2026-06-01T11:19:56.521Z"
+    "updatedAt": "2026-06-01T11:32:27.199Z"
   },
   {
     "id": "3pine",
@@ -75,9 +65,9 @@
     "logo": "/3Pine.png",
     "website": null,
     "published": true,
-    "order": 8,
+    "order": 7,
     "createdAt": "2025-06-01T00:00:00.000Z",
-    "updatedAt": "2026-06-01T11:19:52.376Z"
+    "updatedAt": "2026-06-01T11:32:27.199Z"
   },
   {
     "id": "star-cruise",
@@ -85,9 +75,9 @@
     "logo": "/starcruise2.png",
     "website": null,
     "published": true,
-    "order": 9,
+    "order": 8,
     "createdAt": "2025-06-01T00:00:00.000Z",
-    "updatedAt": "2026-06-01T11:19:48.669Z"
+    "updatedAt": "2026-06-01T11:32:27.199Z"
   },
   {
     "id": "indivar",
@@ -95,9 +85,9 @@
     "logo": "/indivar.jpg",
     "website": null,
     "published": true,
-    "order": 10,
+    "order": 9,
     "createdAt": "2025-06-01T00:00:00.000Z",
-    "updatedAt": "2026-06-01T11:19:43.602Z"
+    "updatedAt": "2026-06-01T11:32:27.199Z"
   },
   {
     "id": "luv-films",
@@ -105,8 +95,8 @@
     "logo": "/LuvFilms.jpg",
     "website": null,
     "published": true,
-    "order": 11,
+    "order": 10,
     "createdAt": "2025-06-01T00:00:00.000Z",
-    "updatedAt": "2026-06-01T11:19:40.673Z"
+    "updatedAt": "2026-06-01T11:32:27.199Z"
   }
 ]

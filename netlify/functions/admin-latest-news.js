@@ -5,7 +5,7 @@
  *
  * Authentication
  *   All requests must send:
- *     Authorization: Bearer <NEWS_ADMIN_TOKEN>
+ *     Authorization: Bearer <website admin token>
  *   NEWS_ADMIN_TOKEN is a Netlify environment variable. It is a SEPARATE
  *   token from BLOG_INGEST_TOKEN — admins may rotate it independently.
  *
@@ -39,13 +39,14 @@ const MAX_RETRIES = 2;
 export default async function handler(req) {
   try {
     // ── Auth ────────────────────────────────────────────────────────────────
-    var token = process.env.NEWS_ADMIN_TOKEN;
-    if (!token) {
-      console.error("[admin-latest-news] NEWS_ADMIN_TOKEN is not set");
+    var allowedTokens = getAllowedAdminTokens();
+    if (allowedTokens.length === 0) {
+      console.error("[admin-latest-news] NEWS_ADMIN_TOKEN, BLOG_INGEST_TOKEN, or GITHUB_TOKEN is not set");
       return jsonError(500, "Server misconfiguration");
     }
-    var authHeader = req.headers.get("authorization") ?? "";
-    if (authHeader !== "Bearer " + token) {
+    var bearerToken = readBearerToken(req);
+    var authorized = await isAuthorizedAdminToken(bearerToken, allowedTokens, process.env.GITHUB_NEWS_PATH ?? "data/latest-news.json");
+    if (!authorized) {
       return jsonError(401, "Unauthorized");
     }
 
@@ -78,6 +79,50 @@ export default async function handler(req) {
     console.error("[admin-latest-news] unhandled error:", err.message);
     return jsonError(500, "Internal Server Error");
   }
+}
+
+async function isAuthorizedAdminToken(bearerToken, allowedTokens, verifyPath) {
+  if (!bearerToken) return false;
+  if (allowedTokens.includes(bearerToken)) return true;
+  return await canAccessConfiguredGitHubRepo(bearerToken);
+}
+
+async function canAccessConfiguredGitHubRepo(token) {
+  var owner = (process.env.GITHUB_OWNER ?? "").trim();
+  var repo = (process.env.GITHUB_REPO ?? "").trim();
+  if (!owner || !repo) return false;
+
+  var url = "https://api.github.com/repos/" + encodeURIComponent(owner) + "/" + encodeURIComponent(repo);
+  try {
+    var res = await fetch(url, {
+      headers: {
+        "Authorization": "Bearer " + token,
+        "Accept": "application/vnd.github+json",
+        "X-GitHub-Api-Version": "2022-11-28",
+      },
+    });
+    return res.ok;
+  } catch {
+    return false;
+  }
+}
+
+function getAllowedAdminTokens() {
+  return [
+    process.env.GITHUB_TOKEN,
+    process.env.NEWS_ADMIN_TOKEN,
+    process.env.BLOG_INGEST_TOKEN,
+  ]
+    .map(function (value) { return value ? value.trim() : ""; })
+    .filter(function (value, index, arr) {
+      return value.length > 0 && arr.indexOf(value) === index;
+    });
+}
+
+function readBearerToken(req) {
+  var authHeader = req.headers.get("authorization") ?? "";
+  var match = authHeader.match(/^Bearer\s+(.+)$/i);
+  return match ? match[1].trim() : "";
 }
 
 // ─── Route parsing ──────────────────────────────────────────────────────────

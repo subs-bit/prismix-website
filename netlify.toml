@@ -10,6 +10,7 @@
   command     = "npm run dev"
   targetPort  = 5173
   port        = 8888
+  autoLaunch  = false
 
 # ── Functions ─────────────────────────────────────────────────────
 [functions]
@@ -46,6 +47,25 @@
 [[redirects]]
   from   = "/api/admin/latest-news"
   to     = "/.netlify/functions/admin-latest-news"
+  status = 200
+  force  = true
+
+# Clients / Brands API
+[[redirects]]
+  from   = "/api/clients"
+  to     = "/.netlify/functions/clients"
+  status = 200
+  force  = true
+
+[[redirects]]
+  from   = "/api/admin/clients/*"
+  to     = "/.netlify/functions/admin-clients/:splat"
+  status = 200
+  force  = true
+
+[[redirects]]
+  from   = "/api/admin/clients"
+  to     = "/.netlify/functions/admin-clients"
   status = 200
   force  = true
 

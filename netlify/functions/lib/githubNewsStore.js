@@ -36,10 +36,10 @@ var COMMIT_MESSAGE = "chore: update latest news [skip netlify]";
  * Netlify Function can surface a 500 instead of issuing a useless API call.
  */
 function getConfig() {
-  var token  = process.env.GITHUB_TOKEN;
-  var owner  = process.env.GITHUB_OWNER;
-  var repo   = process.env.GITHUB_REPO;
-  var branch = process.env.GITHUB_BRANCH     ?? "main";
+  var token  = (process.env.GITHUB_TOKEN ?? "").trim();
+  var owner  = (process.env.GITHUB_OWNER ?? "").trim();
+  var repo   = (process.env.GITHUB_REPO ?? "").trim();
+  var branch = (process.env.GITHUB_BRANCH ?? "main").trim() || "main";
   var path   = process.env.GITHUB_NEWS_PATH  ?? "data/latest-news.json";
 
   if (!token || !owner || !repo) {

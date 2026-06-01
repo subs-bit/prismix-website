@@ -1,0 +1,112 @@
+[
+  {
+    "id": "sodexo",
+    "name": "Sodexo",
+    "logo": "/sodexo.png",
+    "website": null,
+    "published": true,
+    "order": 1,
+    "createdAt": "2025-06-01T00:00:00.000Z",
+    "updatedAt": "2025-06-01T00:00:00.000Z"
+  },
+  {
+    "id": "being-human",
+    "name": "Being Human",
+    "logo": "/being-human.png",
+    "website": null,
+    "published": true,
+    "order": 2,
+    "createdAt": "2025-06-01T00:00:00.000Z",
+    "updatedAt": "2025-06-01T00:00:00.000Z"
+  },
+  {
+    "id": "flf",
+    "name": "FLF",
+    "logo": "/flf.png",
+    "website": null,
+    "published": true,
+    "order": 3,
+    "createdAt": "2025-06-01T00:00:00.000Z",
+    "updatedAt": "2025-06-01T00:00:00.000Z"
+  },
+  {
+    "id": "tata",
+    "name": "Tata",
+    "logo": "/tata.png",
+    "website": null,
+    "published": true,
+    "order": 4,
+    "createdAt": "2025-06-01T00:00:00.000Z",
+    "updatedAt": "2025-06-01T00:00:00.000Z"
+  },
+  {
+    "id": "gsl",
+    "name": "GSL",
+    "logo": "/gsl.png",
+    "website": null,
+    "published": true,
+    "order": 5,
+    "createdAt": "2025-06-01T00:00:00.000Z",
+    "updatedAt": "2025-06-01T00:00:00.000Z"
+  },
+  {
+    "id": "spotlight",
+    "name": "Spotlight",
+    "logo": "/spotlight.png",
+    "website": null,
+    "published": true,
+    "order": 6,
+    "createdAt": "2025-06-01T00:00:00.000Z",
+    "updatedAt": "2025-06-01T00:00:00.000Z"
+  },
+  {
+    "id": "3pine",
+    "name": "3Pine",
+    "logo": "/3Pine.png",
+    "website": null,
+    "published": true,
+    "order": 7,
+    "createdAt": "2025-06-01T00:00:00.000Z",
+    "updatedAt": "2025-06-01T00:00:00.000Z"
+  },
+  {
+    "id": "star-cruise",
+    "name": "Star Cruise",
+    "logo": "/starcruise2.png",
+    "website": null,
+    "published": true,
+    "order": 8,
+    "createdAt": "2025-06-01T00:00:00.000Z",
+    "updatedAt": "2025-06-01T00:00:00.000Z"
+  },
+  {
+    "id": "indivar",
+    "name": "Indivar",
+    "logo": "/indivar.jpg",
+    "website": null,
+    "published": true,
+    "order": 9,
+    "createdAt": "2025-06-01T00:00:00.000Z",
+    "updatedAt": "2025-06-01T00:00:00.000Z"
+  },
+  {
+    "id": "luv-films",
+    "name": "Luv Films",
+    "logo": "/LuvFilms.jpg",
+    "website": null,
+    "published": true,
+    "order": 10,
+    "createdAt": "2025-06-01T00:00:00.000Z",
+    "updatedAt": "2025-06-01T00:00:00.000Z"
+  },
+  {
+    "id": "vroom-vroom",
+    "name": "Vroom Vroom",
+    "logo": "https://raw.githubusercontent.com/prismixstudios/prismixstudios/main/public/clients/client-vroom-vroom-1780312656189.png",
+    "website": null,
+    "published": true,
+    "order": 11,
+    "createdAt": "2026-06-01T11:18:05.931Z",
+    "updatedAt": "2026-06-01T11:18:05.931Z"
+  }
+]

@@ -50,24 +50,24 @@
     "updatedAt": "2025-06-01T00:00:00.000Z"
   },
   {
-    "id": "spotlight",
-    "name": "Spotlight",
-    "logo": "/spotlight.png",
-    "website": null,
-    "published": true,
-    "order": 6,
-    "createdAt": "2025-06-01T00:00:00.000Z",
-    "updatedAt": "2025-06-01T00:00:00.000Z"
-  },
-  {
     "id": "vroom-vroom",
     "name": "Vroom Vroom",
     "logo": "https://raw.githubusercontent.com/prismixstudios/prismixstudios/main/public/clients/client-vroom-vroom-1780312656189.png",
     "website": null,
     "published": true,
-    "order": 7,
+    "order": 6,
     "createdAt": "2026-06-01T11:18:05.931Z",
-    "updatedAt": "2026-06-01T11:19:52.376Z"
+    "updatedAt": "2026-06-01T11:19:56.521Z"
+  },
+  {
+    "id": "spotlight",
+    "name": "Spotlight",
+    "logo": "/spotlight.png",
+    "website": null,
+    "published": true,
+    "order": 7,
+    "createdAt": "2025-06-01T00:00:00.000Z",
+    "updatedAt": "2026-06-01T11:19:56.521Z"
   },
   {
     "id": "3pine",

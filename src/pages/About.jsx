@@ -78,7 +78,7 @@ const About = () => {
                   loop
                   muted
                   playsInline
-                  src="/1.mp4"
+                  src="/New-Assets/About-Us/GSL 2 - Conflict Transformation - PrismixAiStudios (1080p).mp4#t=7"
                   type="video/mp4"
                 ></video>
 
@@ -89,7 +89,7 @@ const About = () => {
                   loop
                   muted
                   playsInline
-                  src="/2.mp4"
+                  src="/New-Assets/About-Us/BharatGen - AI IN HEALTHCARE.mp4#t=3"
                   type="video/mp4"
                 ></video>
               </div>
@@ -101,7 +101,7 @@ const About = () => {
                 loop
                 muted
                 playsInline
-                src="/3.mp4"
+                src="/New-Assets/About-Us/Being Human Campaign 2 - PrismixAiStudios (1080p).mp4"
                 type="video/mp4"
                 onError={() => console.error("Error loading video 3.mp4")}
               ></video>

@@ -16,16 +16,25 @@ const WhatWeDo = () => {
 
   const videos = [
     {
-      src: "video-3.mp4",
-      id: 3,
-      title: "International Women's Day Film for Tata Motors",
+      src: "/New-Assets/WhatWeDo/Happy Birthday Joshi - Teaser.mp4#t=1.9",
+      id: 1,
+      title: "Happy Birthday Joshi",
     },
     {
-      src: "video-2.mp4",
+      src: "/New-Assets/WhatWeDo/Baltanhaji.mov",
       id: 2,
-      title: "Being Human Body Building",
+      title: "Bal Tanhaji",
     },
-    { src: "video-1.mp4", id: 1, title: "Book of Silence " },
+    {
+      src: "/New-Assets/WhatWeDo/Star Cruise - TIED by the TIDE - PrismixAiStudios (1080p).mp4",
+      id: 3,
+      title: "Star Cruise - Tied by the Tide",
+    },
+    { 
+      src: "/New-Assets/WhatWeDo/OAL - Saraswati Camphor - PrismixAiStudios (1080p).mp4", 
+      id: 4, 
+      title: "OAL - Saraswati Camphor"
+    },
   ];
 
   const togglePlayPause = (id) => {
